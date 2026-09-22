@@ -1,0 +1,176 @@
+@import "tailwindcss";
+ 
+@utility page-shell {
+	@apply min-h-full bg-slate-50 px-4 py-6 text-slate-800 sm:px-6 sm:py-8;
+}
+
+@utility page-header {
+	@apply mb-6 flex items-start justify-between gap-4;
+}
+
+@utility page-eyebrow {
+	@apply text-xs font-bold uppercase tracking-[0.16em] text-emerald-700;
+}
+
+@utility page-subtitle {
+	@apply mt-2 text-sm leading-6 text-slate-500;
+}
+
+@utility card {
+	@apply overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm;
+}
+
+@utility card-pad {
+	@apply p-4 sm:p-6;
+}
+
+@utility form-grid {
+	@apply grid gap-4 sm:grid-cols-2;
+}
+
+@utility field {
+	@apply mb-4;
+}
+
+@utility field-compact {
+	@apply mb-0;
+}
+
+@utility field-label {
+	@apply mb-2 block text-sm font-semibold text-slate-700;
+}
+
+@utility alert {
+	@apply mb-4 rounded-xl border px-4 py-3 text-sm;
+}
+
+@utility alert-error {
+	@apply border-red-200 bg-red-50 text-red-700;
+}
+
+@utility alert-success {
+	@apply border-emerald-200 bg-emerald-50 text-emerald-700;
+}
+
+@utility loader-wrap {
+	@apply flex min-h-48 items-center justify-center p-6 text-sm text-slate-500;
+}
+
+@utility empty-state {
+	@apply flex min-h-48 items-center justify-center p-6 text-center text-sm text-slate-500;
+}
+
+@utility stat-row {
+	@apply mb-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+@utility stat-card {
+	@apply rounded-2xl border border-slate-200 bg-white p-5 shadow-sm;
+}
+
+@utility pasture {
+	@apply border-emerald-200 bg-emerald-50;
+}
+
+@utility clay {
+	@apply border-amber-200 bg-amber-50;
+}
+
+@utility stat-label {
+	@apply text-xs font-bold uppercase tracking-wider text-slate-500;
+}
+
+@utility stat-value {
+	@apply mt-2 text-2xl font-bold text-slate-800;
+}
+
+@utility stat-unit {
+	@apply ml-1 text-sm font-medium text-slate-500;
+}
+
+@utility ledger {
+	@apply w-full min-w-[680px] border-collapse text-left text-sm;
+}
+
+@utility btn {
+	@apply inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+@utility btn-primary {
+	@apply border-blue-600 bg-blue-600 text-white hover:border-blue-700 hover:bg-blue-700;
+}
+
+@utility btn-accent {
+	@apply border-emerald-600 bg-emerald-600 text-white hover:border-emerald-700 hover:bg-emerald-700;
+}
+
+@utility btn-outline {
+	@apply border-slate-300 bg-white text-slate-700 hover:border-slate-400 hover:bg-slate-50;
+}
+
+@utility btn-selected {
+	@apply border-emerald-600 bg-emerald-600 text-white hover:border-emerald-700 hover:bg-emerald-700;
+}
+
+@utility btn-row {
+	@apply mt-6 flex flex-wrap gap-3;
+}
+
+@utility section-title {
+	@apply mb-4 text-sm font-bold uppercase tracking-wider text-slate-700;
+}
+
+@utility badge {
+	@apply inline-flex rounded-full px-3 py-1 text-xs font-bold tracking-wide;
+}
+
+@utility active {
+	@apply bg-emerald-100 text-emerald-700;
+}
+
+@utility inactive {
+	@apply bg-red-100 text-red-700;
+}
+
+@utility num {
+	@apply text-right tabular-nums;
+}
+
+@utility max-w-160 {
+	max-width: 40rem;
+}
+
+@utility max-w-120 {
+	max-width: 30rem;
+}
+
+@media (max-width: 640px) {
+	.form-grid.grid-cols-\[1fr_1fr_auto\],
+	.form-grid.grid-cols-\[1\.4fr_1fr_1fr_auto\] {
+		grid-template-columns: 1fr;
+	}
+
+	.btn-row {
+		align-items: stretch;
+	}
+
+	.btn-row > .btn {
+		flex: 1 1 10rem;
+	}
+}
+
+@layer base {
+	input,
+	select,
+	textarea {
+		@apply transition focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100;
+	}
+
+	.ledger th {
+		@apply border-b border-slate-200 bg-slate-50 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-slate-500;
+	}
+
+	.ledger td {
+		@apply border-b border-slate-100 px-4 py-3 text-slate-700;
+	}
+}
