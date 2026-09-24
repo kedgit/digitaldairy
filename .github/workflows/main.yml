@@ -23,6 +23,7 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: maven
+          cache-dependency-path: version1/pom.xml
 
       - name: Build Spring Boot application
         run: mvn clean package -DskipTests
