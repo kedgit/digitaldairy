@@ -96,7 +96,7 @@ public class MilkEntryService {
                 milkEntry.getAmount());
 
         // 3. Send event to Kafka
-        milkEntryProducer.sendMilkEntryEvent(event);
+        milkEntryProducer.sendMilkEntry(event);
 
         // for first time farmer
         if (!paymentAccountService.existsByFarmerId(farmer.getFarmerId())) {

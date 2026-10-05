@@ -1,27 +1,25 @@
 package com.milkdairy.version1.kafka.producer;
 
-import com.milkdairy.version1.kafka.event.MilkEntryEvent;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
+
+import com.milkdairy.version1.kafka.event.MilkEntryEvent;
 
 @Service
 public class MilkEntryProducer {
 
-    // create vaiable name topic 
-    private static final String TOPIC="milk_entry_events";
+    private final KafkaTemplate<String, MilkEntryEvent> kafkaTemplate;
 
-    // crate object of template from kafka to send event
-    private final KafkaTemplate<String ,MilkEntryEvent> kafkaTemplate;
+    public MilkEntryProducer(
+            KafkaTemplate<String, MilkEntryEvent> kafkaTemplate) {
 
-    // create constructor takes event initialize
-    public MilkEntryProducer(KafkaTemplate<String ,MilkEntryEvent> kafkaTemplate){
-        this.kafkaTemplate=kafkaTemplate;
+        this.kafkaTemplate = kafkaTemplate;
     }
 
-    // creae method too send event to kafka topic with name
+    public void sendMilkEntry(MilkEntryEvent event) {
 
-    public void sendMilkEntryEvent(MilkEntryEvent event){
-        kafkaTemplate.send(TOPIC,event.getFarmerId().toString(),event);
+        kafkaTemplate.send("milk-entry-topic", event);
+
+        System.out.println("Milk entry event sent");
     }
-    
 }
