@@ -13,7 +13,7 @@ const NAV_ITEMS = {
     { to: '/operator/today', label: 'Daily Milk Entries' },
     { to: '/operator/milk-entry', label: 'Add Milk Entry' },
     { to: '/operator/fatrate', label: 'FatRate' },
-    { to: '/operator/advance-payment', label: 'Advance Payment' },
+    { to: '/operator/advance-payment', label: 'Advance' },
     { to: '/operator/payment', label: 'Payment' }
   ],
   ADMIN: [

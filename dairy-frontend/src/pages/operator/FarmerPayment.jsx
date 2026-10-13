@@ -268,7 +268,7 @@ export default function FarmerPayment() {
               >
                 {confirming
                   ? 'Processing…'
-                  : 'Confirm & Make Payment'}
+                  : 'MakePayment'}
               </button>
 
             </div>

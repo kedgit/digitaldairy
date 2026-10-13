@@ -152,6 +152,7 @@ export default function AddMilkEntry() {
                   <span className="absolute left-3.5 top-1/2 z-[1] -translate-y-1/2 text-base">👤</span>
 
                   <input
+                    id="farmerId"
                     placeholder="Enter farmer ID"
                     value={form.farmerId}
                     onChange={(e) => handleChange('farmerId', e.target.value)}
@@ -170,6 +171,7 @@ export default function AddMilkEntry() {
                 </label>
 
                 <select
+                  id="session"
                   value={form.shift}
                   onChange={(e) => handleChange('shift', e.target.value)}
                   className="box-border w-full rounded-[9px] border border-slate-300 bg-white p-[13px_14px] text-[15px] text-slate-800 outline-none"
@@ -189,6 +191,7 @@ export default function AddMilkEntry() {
 
                 <div className="relative w-full">
                   <input
+                    id="quantity"
                     type="number"
                     step="0.01"
                     min="0.01"
@@ -215,6 +218,7 @@ export default function AddMilkEntry() {
 
                 <div className="relative w-full">
                   <input
+                    id="fat"
                     type="number"
                     step="0.01"
                     min="0"
@@ -242,6 +246,7 @@ export default function AddMilkEntry() {
               </div>
 
               <button
+                id="save"
                 type="submit"
                 disabled={saving}
                 className=" btn btn-primary min-w-[145px] cursor-pointer rounded-[9px] border-0 bg-blue-600 px-6 py-[13px] text-sm font-semibold text-white shadow-[0_4px_12px_rgba(37,99,235,0.25)] disabled:cursor-not-allowed disabled:opacity-60"
