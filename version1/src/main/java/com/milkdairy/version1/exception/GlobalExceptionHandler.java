@@ -56,7 +56,7 @@ public class GlobalExceptionHandler {
         CentralApiResponse<Void> response =
                 new CentralApiResponse<>(
                         500,
-                        "Internal server error",
+                        ex.getMessage(),
                         null
                 );
 

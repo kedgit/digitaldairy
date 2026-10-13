@@ -73,6 +73,9 @@ public class MilkEntryService {
 
         BigDecimal ratePerLiter = fatRate.getRatePerLiter();
         BigDecimal quantity = request.getQuantityLiter();
+        if(quantity.compareTo(BigDecimal.ZERO) <= 0){
+            throw new IllegalArgumentException("Quantity must be greater than zero");
+        }
         BigDecimal amount = quantity.multiply(ratePerLiter);
 
         // save to db

@@ -101,6 +101,7 @@ export default function AdvancePayment() {
 
             <input
               type="text"
+              id="farmerId"
               name="farmerId"
               placeholder="Enter farmer ID"
               value={form.farmerId}
@@ -120,6 +121,7 @@ export default function AdvancePayment() {
 
               <input
                 type="text"
+                id="amount"
                 name="amount"
                 placeholder="Enter amount"
                 value={form.amount}
@@ -137,6 +139,7 @@ export default function AdvancePayment() {
             </label>
 
             <textarea
+              id="remarks"
               name="remarks"
               placeholder="Enter remarks if required"
               value={form.remarks}
@@ -163,6 +166,7 @@ export default function AdvancePayment() {
           {/* Submit */}
           <button
             type="submit"
+            id="advancePaymentButton"
             className="w-full cursor-pointer rounded-lg border-0 bg-blue-600 p-[13px] text-[15px] font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
           >
             {advance ? "Payment Processing" : "Give Advance"}
